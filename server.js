@@ -96,4 +96,4 @@ app.get('pizza/:id', (req, res) => {
 
     update.quantity = body;
     res.json("updated");
-})
+});
