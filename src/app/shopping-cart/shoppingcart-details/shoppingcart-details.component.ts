@@ -3,11 +3,11 @@ import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
 
 @Component({
-  selector: 'app-shopping-cart',
-  templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.css']
+  selector: 'app-shoppingcart-details',
+  templateUrl: './shoppingcart-details.component.html',
+  styleUrls: ['./shoppingcart-details.component.css']
 })
-export class ShoppingCartComponent implements OnInit {
+export class ShoppingcartDetailsComponent implements OnInit {
 
   pizzaCart : MenuItem[];
 
@@ -26,4 +26,5 @@ export class ShoppingCartComponent implements OnInit {
   submit(){
     this.pizzaCart.length = 0;
   }
+
 }
