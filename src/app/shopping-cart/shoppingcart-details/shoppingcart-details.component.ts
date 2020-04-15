@@ -15,10 +15,10 @@ export class ShoppingcartDetailsComponent implements OnInit {
     this.share.currentData.subscribe((data: any) => this.pizzaCart = data);
   }
 
-  ngOnInit(): void {
+  ngOnInit() : void {
   }
 
-  delete(pizzaCart:MenuItem){
+  deletefromCart(pizzaCart:MenuItem){
     let index = this.pizzaCart.indexOf(pizzaCart);
     this.pizzaCart.splice(index, 1);
   }
