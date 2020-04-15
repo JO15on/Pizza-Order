@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
 
@@ -9,7 +9,7 @@ import { ShareDataService } from 'src/app/share-data.service';
 })
 export class MenuDetailsComponent implements OnInit {
 
-  item : MenuItem;
+  @Input()item : MenuItem;
   menu : MenuItem[];
   pizzaCart : MenuItem[] = [];
 

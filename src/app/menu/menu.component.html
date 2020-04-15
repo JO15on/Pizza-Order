@@ -3,7 +3,7 @@
 <button (click)="cart()">Shopping Cart</button>
 
 <div *ngIf="showMenu">
-    <app-menu-details></app-menu-details>
+    <app-menu-details *ngFor="let item of menu" [item]="item"></app-menu-details>
 </div>
 
 <app-shopping-cart *ngIf="showShoppingCart"></app-shopping-cart>
