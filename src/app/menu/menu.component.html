@@ -1,0 +1,9 @@
+<h1>Pizza Menu</h1>
+
+<button (click)="cart()">Shopping Cart</button>
+
+<div *ngIf="showMenu">
+    <app-menu-details></app-menu-details>
+</div>
+
+<app-shopping-cart *ngIf="showShoppingCart"></app-shopping-cart>
