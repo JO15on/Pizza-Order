@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../menu-item';
 import { MenuAPIService } from '../menu-api.service';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -31,7 +32,10 @@ export class MenuComponent implements OnInit {
   }
 
   counter(){
-    let count = 0;
-    count++;
+    this.count++;
+  }
+
+  deleteCounter(){
+    this.count--;
   }
 }

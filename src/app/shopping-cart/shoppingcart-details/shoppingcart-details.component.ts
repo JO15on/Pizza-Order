@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
 
@@ -11,6 +11,8 @@ export class ShoppingcartDetailsComponent implements OnInit {
 
   pizzaCart : MenuItem[];
 
+  @Output() count = new EventEmitter<any>();
+
   constructor(private share: ShareDataService) {  
     this.share.currentData.subscribe((data: any) => this.pizzaCart = data);
   }
@@ -21,6 +23,10 @@ export class ShoppingcartDetailsComponent implements OnInit {
   deletefromCart(pizzaCart:MenuItem){
     let index = this.pizzaCart.indexOf(pizzaCart);
     this.pizzaCart.splice(index, 1);
+  }
+  
+  deleteCounter(){
+    this.count.emit();
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu-details',
