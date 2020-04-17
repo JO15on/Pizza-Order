@@ -4,6 +4,6 @@
         <p>{{item.topping}}</p>
         <p>Price: ${{item.price}}</p>
         <img class="image" src="{{item.image}}"/>
-        <button (click)="addCart()">Add to Cart</button>
+        <button (click)="addCart()" (click)="incrementCount()">Add to Cart</button>
     </div>
 </div>

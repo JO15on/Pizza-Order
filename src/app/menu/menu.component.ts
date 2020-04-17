@@ -29,4 +29,9 @@ export class MenuComponent implements OnInit {
     this.showShoppingCart = !this.showShoppingCart;
     this.showMenu = !this.showMenu;
   }
+
+  counter(){
+    let count = 0;
+    count++;
+  }
 }
