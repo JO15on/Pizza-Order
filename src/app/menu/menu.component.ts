@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   menu  : MenuItem[]=[];
   showShoppingCart = false;
   showMenu = true;
-  count : number;
+  count : number = 0;
 
   ngOnInit(): void {
     this.getMenu();
