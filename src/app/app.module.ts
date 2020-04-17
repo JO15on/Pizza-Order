@@ -8,6 +8,10 @@ import { MenuComponent } from './menu/menu.component';
 import { MenuDetailsComponent } from './menu/menu-details/menu-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShoppingcartDetailsComponent } from './shopping-cart/shoppingcart-details/shoppingcart-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ShoppingcartDetailsComponent } from './shopping-cart/shoppingcart-detai
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
