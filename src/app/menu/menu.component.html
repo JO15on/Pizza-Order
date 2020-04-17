@@ -3,10 +3,7 @@
         <h2 routerLink='/menu'>Pizza Menu</h2>
 
         <!-- <button (click)="cart()"><img class="image" src="assets/shopping.png" routerLink='/shoppingcart'/></button> -->
-        <button mat-icon-button>
-            <mat-icon (click)="cart()">shopping_cart</mat-icon>
-            <span class="badge" *ngIf="count > 0" (count)="counter($event)" (count)="deleteCounter($event)">{{count}}</span>
-        </button>
+        <mat-icon matBadge="0" matBadgeColor="warn" matBadgeSize="small" (click)="cart()" (count)="counter($event)" (count)="deleteCounter($event)">shopping_cart</mat-icon>
     </div>
 
     
