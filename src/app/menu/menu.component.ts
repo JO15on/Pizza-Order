@@ -32,11 +32,11 @@ export class MenuComponent implements OnInit {
     this.showMenu = !this.showMenu;
   }
 
-  counter(){
+  counter(count){
     this.count++;
   }
 
-  deleteCounter(){
+  deleteCounter(count){
     this.count--;
   }
 }
