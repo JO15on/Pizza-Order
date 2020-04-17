@@ -23,8 +23,4 @@ export class ShoppingcartDetailsComponent implements OnInit {
     this.pizzaCart.splice(index, 1);
   }
 
-  submit(){
-    this.pizzaCart.length = 0;
-  }
-
 }

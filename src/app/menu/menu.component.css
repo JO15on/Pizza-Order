@@ -1,0 +1,44 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    margin-left: 1em;
+    background: none;
+}
+
+.image {
+    height: 2em;
+}
+
+.menuDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+app-menu-details {
+    border: 1px solid white;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+@media only screen and (min-width: 600px){
+    .menuDetails {
+        display: flex;
+        flex-direction: row;
+    }
+}

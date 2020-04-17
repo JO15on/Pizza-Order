@@ -1,0 +1,36 @@
+.menuDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    border: 1px solid white;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.image {
+    height: 7rem;
+    margin-bottom: 1em;
+}
+
+button {
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .menuDetails{
+        width: 35vw;
+    }
+
+    .image {
+        height: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .image {
+        height: 11rem;
+    }
+}

@@ -1,9 +1,15 @@
-<h1>Pizza Menu</h1>
+<div class="menu">
+    <div class="header">
+        <h2 routerLink='/menu'>Pizza Menu</h2>
 
-<button (click)="cart()">Shopping Cart</button>
+        <button (click)="cart()"><img class="image" src="assets/shopping.png" routerLink='/shoppingcart'/></button>
+    </div>
 
-<div *ngIf="showMenu">
-    <app-menu-details *ngFor="let item of menu" [item]="item"></app-menu-details>
+    
+    <div *ngIf="showMenu" class="menuDetails">
+        <app-menu-details *ngFor="let item of menu" [item]="item"></app-menu-details>
+    </div>
+    
+    <app-shopping-cart *ngIf="showShoppingCart"></app-shopping-cart>
 </div>
 
-<app-shopping-cart *ngIf="showShoppingCart"></app-shopping-cart>
