@@ -20,7 +20,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMenu();
-    this._count.sendCounter().subscribe(count => this.count = count);
+    this._count.sendCounter().subscribe(count => {
+      console.log(count);
+      this.count = count;});
   }
 
   getMenu() {
@@ -34,8 +36,9 @@ export class MenuComponent implements OnInit {
     this.showMenu = !this.showMenu;
   }
 
-  counter(count){
+  counter(){
     this.count++;
+    this._count.setCounter(this.count);
   }
 
 }
