@@ -18,12 +18,18 @@ export class ShoppingcartDetailsComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    this.count = this._count.getCounter();
+    this._count.sendCounter().subscribe(count => this.count = count);
   }
 
   deletefromCart(pizzaCart:MenuItem){
     let index = this.pizzaCart.indexOf(pizzaCart);
     this.pizzaCart.splice(index, 1);
   }
+
+  deleteCounter(){
+    this.count--;
+    this._count.setCounter(this.count);
+  }
+
 
 }

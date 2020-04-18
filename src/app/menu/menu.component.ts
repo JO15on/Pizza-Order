@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMenu();
-    this.count = this._count.getCounter();
+    this._count.sendCounter().subscribe(count => this.count = count);
   }
 
   getMenu() {
