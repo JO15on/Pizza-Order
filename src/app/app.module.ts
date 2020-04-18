@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
+import { CounterService } from './counter.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatButtonModule,
     MatBadgeModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

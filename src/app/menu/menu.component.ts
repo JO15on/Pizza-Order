@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../menu-item';
 import { MenuAPIService } from '../menu-api.service';
+import { CounterService } from '../counter.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { MenuAPIService } from '../menu-api.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor( public service : MenuAPIService) { }
+  constructor( public service : MenuAPIService, private _count : CounterService) { }
 
   menu  : MenuItem[]=[];
   showShoppingCart = false;
@@ -19,6 +20,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMenu();
+    this.count = this._count.getCounter();
   }
 
   getMenu() {
@@ -36,7 +38,4 @@ export class MenuComponent implements OnInit {
     this.count++;
   }
 
-  deleteCounter(count){
-    this.count--;
-  }
 }

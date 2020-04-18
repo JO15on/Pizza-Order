@@ -1,11 +1,8 @@
 <div class="menu">
     <div class="header">
         <h2 routerLink='/menu'>Pizza Menu</h2>
-
-        <button mat-icon-button>
-            <mat-icon (click)="cart()">shopping_cart</mat-icon>
-            <span class="badge" *ngIf="count > 0">{{count}}</span>
-        </button>
+        
+        <mat-icon matBadge="{{count}}" matBadgeColor="warn" matBadgeSize="small" (click)="cart()">shopping_cart</mat-icon>
     </div>
 
     
@@ -13,6 +10,6 @@
         <app-menu-details *ngFor="let item of menu" [item]="item" (count)="counter($event)"></app-menu-details>
     </div>
     
-    <app-shopping-cart *ngIf="showShoppingCart" (count)="deleteCounter($event)"></app-shopping-cart>
+    <app-shopping-cart *ngIf="showShoppingCart"></app-shopping-cart>
 </div>
 

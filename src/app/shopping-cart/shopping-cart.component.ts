@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { MenuItem } from '../menu-item';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -9,6 +10,8 @@ import { MenuItem } from '../menu-item';
 export class ShoppingCartComponent implements OnInit {
   pizzaCart : MenuItem[];
 
+  @Output() count = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +19,9 @@ export class ShoppingCartComponent implements OnInit {
 
   submit(){
     this.pizzaCart.length = 0;
+  }
+
+  deleteCounter(count){
+    this.count.emit();
   }
 }

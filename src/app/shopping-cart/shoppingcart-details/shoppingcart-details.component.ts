@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
+import { CounterService } from 'src/app/counter.service';
 
 @Component({
   selector: 'app-shoppingcart-details',
@@ -10,23 +11,19 @@ import { ShareDataService } from 'src/app/share-data.service';
 export class ShoppingcartDetailsComponent implements OnInit {
 
   pizzaCart : MenuItem[];
+  count : number;
 
-  @Output() count = new EventEmitter<any>();
-
-  constructor(private share: ShareDataService) {  
+  constructor(private share: ShareDataService, public _count : CounterService) {  
     this.share.currentData.subscribe((data: any) => this.pizzaCart = data);
   }
 
   ngOnInit() : void {
+    this.count = this._count.getCounter();
   }
 
   deletefromCart(pizzaCart:MenuItem){
     let index = this.pizzaCart.indexOf(pizzaCart);
     this.pizzaCart.splice(index, 1);
-  }
-  
-  deleteCounter(){
-    this.count.emit();
   }
 
 }
