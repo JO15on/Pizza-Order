@@ -13,7 +13,6 @@ export class CounterService {
 
   getCounter(){
     this.count--;
-    console.log(this.count);
     return this.count;
   }
 

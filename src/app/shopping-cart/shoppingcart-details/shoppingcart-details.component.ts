@@ -18,9 +18,7 @@ export class ShoppingcartDetailsComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    this._count.sendCounter().subscribe(count => {
-      console.log(count);
-      this.count = count;});
+    this._count.sendCounter().subscribe(count => this.count = count);
   }
 
   deletefromCart(pizzaCart:MenuItem){
@@ -31,6 +29,5 @@ export class ShoppingcartDetailsComponent implements OnInit {
       this.pizzaCart.splice(index, 1);
     }, 0);
   }
-
 
 }
