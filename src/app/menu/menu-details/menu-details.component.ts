@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
-import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu-details',
@@ -14,8 +13,6 @@ export class MenuDetailsComponent implements OnInit {
   menu : MenuItem[];
   pizzaCart : MenuItem[] = [];
 
-  @Output() count = new EventEmitter<any>();
-
   constructor(private share: ShareDataService) { 
     this.share.currentData.subscribe(data => this.pizzaCart = data);
   }
@@ -26,10 +23,6 @@ export class MenuDetailsComponent implements OnInit {
   addCart(){
     this.pizzaCart.push(this.item);
     this.share.changeData(this.pizzaCart);
-  }
-
-  incrementCount(){
-    this.count.emit();
   }
 
 }
