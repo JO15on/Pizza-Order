@@ -20,8 +20,10 @@ export class AddService {
     return this.data.asObservable()   
   }
 
-  // getPrice(price){
-  //   return this.http.get("http://localhost:3000/pizza/:id", {menu: price}, {responseType: "json"});
-  // }
+  getPrice(price){
+    return this.http.get("http://localhost:3000/pizza/:id", { responseType: "json"}).subscribe(data => {
+    console.log(data);
+  });
+  }
   
 }
