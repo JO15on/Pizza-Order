@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { CounterService } from './counter.service';
+import { AddService } from './add.service';
 
 
 @NgModule({
@@ -32,7 +33,10 @@ import { CounterService } from './counter.service';
     MatButtonModule,
     MatBadgeModule
   ],
-  providers: [CounterService],
+  providers: [
+    CounterService,
+    AddService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

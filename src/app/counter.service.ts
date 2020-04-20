@@ -11,14 +11,7 @@ export class CounterService {
 
   constructor() { }
 
-  getCounter(){
-    this.count--;
-    console.log(this.count);
-    return this.count;
-  }
-
   setCounter(count : number){
-    console.log(count);
     this.data.next(count);
   }
 
