@@ -24,7 +24,10 @@ export class AddService {
   }
 
   getSubTotal(total) {
-    return this.http.get("http://localhost:3000/subtotal", {responseType: "json"});
+    let total = 0;
+    for(let item of this.pizzaCart){
+      total += item.price;
+    }
   }
 
 }
