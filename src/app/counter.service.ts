@@ -11,15 +11,12 @@ export class CounterService {
 
   constructor() { }
 
-<<<<<<< HEAD
-=======
   getCounter(){
     this.count--;
     console.log(this.count);
     return this.count;
   }
 
->>>>>>> parent of 1d2a7d4... took out console log
   setCounter(count : number){
     this.data.next(count);
   }

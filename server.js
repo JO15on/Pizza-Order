@@ -16,7 +16,7 @@ let menu = [
         id: 0,
         name: "Cheese Pizza",
         price: 8.50,
-        topping: "cheese",
+        topping: "Cheese",
         quantity: 0,
         image: "assets/cheese.jpg"
     },
@@ -24,7 +24,7 @@ let menu = [
         id: 1,
         name: "Pepperoni Pizza",
         price: 10.50,
-        topping: "pepperoni",
+        topping: "Pepperoni",
         quantity: 0,
         image: "assets/pepperoni.jpg"
     },
@@ -32,7 +32,7 @@ let menu = [
         id: 2,
         name: "Pepperoni and Sausage Pizza",
         price: 12,
-        topping: "pepperoni, sausage",
+        topping: "Pepperoni, Sausage",
         quantity: 0,
         image: "assets/pepperoni_sausage.jpg"
     },
@@ -40,7 +40,7 @@ let menu = [
         id: 3,
         name: "Supreme Pizza",
         price: 13.50,
-        topping: "pepperoni, sausage, mushrooms, green pepper, onions, black olives",
+        topping: "Pepperoni, Sausage, Mushrooms, Green Pepper, Onions, Black Olives",
         quantity: 0,
         image: "assets/supreme.jpg"
     },
@@ -48,7 +48,7 @@ let menu = [
         id: 4,
         name: "Hawaiian Pizza",
         price: 11.50,
-        topping: "ham, pineapple",
+        topping: "Ham, Pineapple",
         quantity: 0,
         image: "assets/hawaiian.jpg"
     },
@@ -56,7 +56,7 @@ let menu = [
         id: 5,
         name: "Margherita Pizza",
         price: 8,
-        topping: "mozzarella cheese, basil",
+        topping: "Mozzarella Cheese, Basil",
         quantity: 0,
         image: "assets/margherita.jpg"
     },
@@ -64,7 +64,7 @@ let menu = [
         id: 6,
         name: "Meat Lovers Pizza",
         price: 14.50,
-        topping: "pepperoni, sausage, ham, bacon",
+        topping: "Pepperoni, Sausage, Ham, Bacon",
         quantity: 0,
         image: "assets/meat_lovers.jpg"
     },
@@ -72,7 +72,7 @@ let menu = [
         id: 7,
         name: "Vegeterian Pizza",
         price: 13.50,
-        topping: "banana pepper, green pepper, onions, mushrooms, red pepper, black olives",
+        topping: "Banana Pepper, Green Pepper, Onions, Mushrooms, Red Pepper, Black Olives",
         quantity: 0,
         image: "assets/veggie.png"
     },
@@ -80,7 +80,7 @@ let menu = [
         id: 8,
         name: "BBQ Chicken Pizza",
         price: 12.50,
-        topping: "chicken, red onion, parsley",
+        topping: "Chicken, Red Onion, Parsley",
         quantity: 0,
         image: "assets/bbq.jpeg"
     },
@@ -88,7 +88,7 @@ let menu = [
         id: 9,
         name: "Buffalo Chicken Pizza",
         price: 8,
-        topping: "chicken",
+        topping: "Chicken, Bleu Cheese",
         quantity: 0,
         image: "assets/buffalo.jpg"
     }

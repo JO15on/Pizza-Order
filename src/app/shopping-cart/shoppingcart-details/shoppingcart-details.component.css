@@ -35,6 +35,12 @@ button {
 }
 
 @media only screen and (min-width: 1024px) {
+
+    .menuDetails:hover {
+        border-radius: 1em;
+        box-shadow: 2px 2px black;
+    }
+
     .image {
         height: 11rem;
     }

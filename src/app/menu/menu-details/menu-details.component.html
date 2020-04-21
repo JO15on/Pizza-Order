@@ -1,8 +1,8 @@
 <div>
     <div class="menuDetails">
-        <p>{{item.name}}</p>
+        <h2>{{item.name}}</h2>
         <p>{{item.topping}}</p>
-        <p>Price: ${{item.price | currency:'CURRENCY'}}</p>
+        <p>Price: {{item.price | currency}}</p>
         <img class="image" src="{{item.image}}"/>
         <button (click)="addCart()">Add to Cart</button>
     </div>

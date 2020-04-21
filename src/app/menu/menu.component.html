@@ -7,7 +7,7 @@
 
     
     <div *ngIf="showMenu" class="menuDetails">
-        <app-menu-details *ngFor="let item of menu" [item]="item" (count)="counter()"></app-menu-details>
+        <app-menu-details *ngFor="let item of menu" [item]="item" (click)="counter()"></app-menu-details>
     </div>
     
     <app-shopping-cart *ngIf="showShoppingCart"></app-shopping-cart>
