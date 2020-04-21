@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { MenuItem } from './menu-item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AddService {
 
-  add : number
+  add : number;
+  total : number;
+  pizzaCart : MenuItem[];
   public data = new BehaviorSubject<number>(0);
 
   constructor(public http : HttpClient) { }
@@ -16,14 +19,12 @@ export class AddService {
     this.data.next(add);
   }
 
-  addCounter() : Observable<number> {
+  addSubTotal() : Observable<number> {
     return this.data.asObservable()   
   }
 
-  getPrice(price){
-    return this.http.get("http://localhost:3000/pizza/:id", { responseType: "json"}).subscribe(data => {
-    console.log(data);
-  });
+  getSubTotal(total) {
+    return this.http.get("http://localhost:3000/subtotal", {responseType: "json"});
   }
-  
+
 }

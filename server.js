@@ -107,3 +107,11 @@ app.get('pizza/:id', (req, res) => {
     update.quantity = body;
     res.json("updated");
 });
+
+app.get('pizza/subtotal', (req, res) => {
+    let total = 0;
+    for(let item of pizzaCart){  //productsArray is your array of products
+    total += item.price //or however you store the price on the product
+    }
+    res.json({total});
+});

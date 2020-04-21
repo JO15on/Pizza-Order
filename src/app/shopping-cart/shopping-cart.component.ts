@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { MenuItem } from '../menu-item';
+import { AddService } from '../add.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,10 +9,18 @@ import { MenuItem } from '../menu-item';
 })
 export class ShoppingCartComponent implements OnInit {
   pizzaCart : MenuItem[];
+  total : number;
 
-  constructor() { }
+  constructor(private _total : AddService) { }
 
   ngOnInit(): void {
+    this.getSubTotal();
+  }
+
+  getSubTotal(){
+    this._total.getSubTotal(this.total).subscribe( (total : MenuItem[]) => {
+      total = total;
+    });
   }
 
   submit(){
