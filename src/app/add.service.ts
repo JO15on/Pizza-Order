@@ -15,15 +15,15 @@ export class AddService {
 
   constructor(public http : HttpClient) { }
 
-  addTotal(add : number){
-    this.data.next(add);
+  addTotal(total : number){
+    this.data.next(total);
   }
 
   addSubTotal() : Observable<number> {
     return this.data.asObservable()   
   }
 
-  getSubTotal(total) {
+  getSubTotal() {
     let total = 0;
     for(let item of this.pizzaCart){
       total += item.price;
