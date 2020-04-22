@@ -23,11 +23,8 @@ export class AddService {
     return this.data.asObservable()   
   }
 
-  getSubTotal() {
-    let total = 0;
-    for(let item of this.pizzaCart){
-      total += item.price;
-    }
+  getTotal(){
+    return this.total;
   }
 
 }

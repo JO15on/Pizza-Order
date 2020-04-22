@@ -18,10 +18,12 @@ export class MenuComponent implements OnInit {
   showShoppingCart = false;
   showMenu = true;
   count : number = 0;
+  total : number = 0;
 
   ngOnInit(): void {
     this.getMenu();
     this._count.sendCounter().subscribe(count => this.count = count);
+    this._total.addSubTotal().subscribe(total => this.total = total)
   }
 
   getMenu() {
@@ -38,6 +40,13 @@ export class MenuComponent implements OnInit {
   counter(){
     this.count++;
     this._count.setCounter(this.count);
+  }
+
+  subTotal(){
+    let total = 0;
+    for(let item of this.menu){
+      total += item.price;
+      this._total.addTotal(this.total);
   }
 
 }

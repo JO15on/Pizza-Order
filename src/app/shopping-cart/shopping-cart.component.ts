@@ -14,13 +14,6 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private _total : AddService) { }
 
   ngOnInit(): void {
-    this.getSubTotal();
-  }
-
-  getSubTotal(){
-    this._total.getSubTotal(this.total).subscribe( (total : MenuItem[]) => {
-      total = total;
-    });
   }
 
   submit(){
