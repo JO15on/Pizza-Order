@@ -7,8 +7,7 @@
 
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .cartDetails {
@@ -32,6 +31,6 @@
 
 @media only screen and (min-width: 1024px){
     .shopping {
-        width: 100vw;
+        width: 100%;
     }
 }

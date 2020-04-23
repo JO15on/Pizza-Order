@@ -17,7 +17,7 @@ export class AddService {
   addTotal(total : number){
     let newtotal = 0;
     newtotal = total + this.data.value;
-    console.log(this.data);
+    this.data.next(newtotal);
   }
 
   addSubTotal() : Observable<number> {
@@ -25,12 +25,9 @@ export class AddService {
   }
 
   deleteTotal(total : number){
-    console.log(total);
     let newTotal = this.data.value;
-    console.log(newTotal);
     newTotal = this.data.value - total;
     this.data.next(newTotal);
-    console.log(newTotal);
   }
 
 }

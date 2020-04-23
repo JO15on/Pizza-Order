@@ -1,6 +1,7 @@
 <div class="shopping">
     <div class="header">
         <h2>Shopping Cart</h2>
+        <h2>Total: {{total | currency }}</h2>
     </div>
 
     <div class="cartDetails">
@@ -8,7 +9,6 @@
     </div>
 
     <div>
-        <h2>Total: {{total | currency }}</h2>
         <button (click)="submit()">Submit Order</button>
     </div>
 </div>
