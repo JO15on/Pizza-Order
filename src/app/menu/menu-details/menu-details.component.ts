@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { MenuItem } from 'src/app/menu-item';
 import { ShareDataService } from 'src/app/share-data.service';
+import { AddService } from 'src/app/add.service';
 
 @Component({
   selector: 'app-menu-details',
@@ -13,7 +14,7 @@ export class MenuDetailsComponent implements OnInit {
   menu : MenuItem[];
   pizzaCart : MenuItem[] = [];
 
-  constructor(private share: ShareDataService) { 
+  constructor(private share: ShareDataService, private _total : AddService) { 
     this.share.currentData.subscribe(data => this.pizzaCart = data);
   }
 
@@ -23,6 +24,7 @@ export class MenuDetailsComponent implements OnInit {
   addCart(){
     this.pizzaCart.push(this.item);
     this.share.changeData(this.pizzaCart);
+    this._total.addTotal(this.item.price);
   }
 
 }

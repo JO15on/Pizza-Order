@@ -8,7 +8,6 @@ import { MenuItem } from './menu-item';
 })
 export class AddService {
 
-  add : number;
   total : number;
   pizzaCart : MenuItem[];
   public data = new BehaviorSubject<number>(0);
@@ -16,15 +15,22 @@ export class AddService {
   constructor(public http : HttpClient) { }
 
   addTotal(total : number){
-    this.data.next(total);
+    let newtotal = 0;
+    newtotal = total + this.data.value;
+    console.log(this.data);
   }
 
   addSubTotal() : Observable<number> {
     return this.data.asObservable()   
   }
 
-  getTotal(){
-    return this.total;
+  deleteTotal(total : number){
+    console.log(total);
+    let newTotal = this.data.value;
+    console.log(newTotal);
+    newTotal = this.data.value - total;
+    this.data.next(newTotal);
+    console.log(newTotal);
   }
 
 }

@@ -42,11 +42,4 @@ export class MenuComponent implements OnInit {
     this._count.setCounter(this.count);
   }
 
-  subTotal(){
-    let total = 0;
-    for(let item of this.menu){
-      total += item.price;
-      this._total.addTotal(this.total);
-  }
-
 }

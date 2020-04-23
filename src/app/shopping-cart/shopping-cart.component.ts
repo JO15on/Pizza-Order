@@ -9,11 +9,13 @@ import { AddService } from '../add.service';
 })
 export class ShoppingCartComponent implements OnInit {
   pizzaCart : MenuItem[];
+  item: string;
   total : number;
 
   constructor(private _total : AddService) { }
 
   ngOnInit(): void {
+    this._total.addSubTotal().subscribe(total => this.total = total);
   }
 
   submit(){
