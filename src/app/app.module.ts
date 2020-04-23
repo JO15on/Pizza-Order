@@ -22,7 +22,7 @@ import { AddService } from './add.service';
     ShoppingCartComponent,
     MenuComponent,
     MenuDetailsComponent,
-    ShoppingcartDetailsComponent
+    ShoppingcartDetailsComponent,
   ],
   imports: [
     BrowserModule,

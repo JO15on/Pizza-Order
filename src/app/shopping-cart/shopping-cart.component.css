@@ -19,6 +19,15 @@
     align-items: center;
 }
 
+button {
+    margin-bottom: 1em;
+    background-color: #E31837;
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    color: white;
+}
+
 @media only screen and (min-width: 600px) {
     app-shoppingcart-details {
         display: flex;

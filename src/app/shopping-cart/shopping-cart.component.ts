@@ -8,6 +8,7 @@ import { AddService } from '../add.service';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
+
   pizzaCart : MenuItem[];
   item: string;
   total : number;
