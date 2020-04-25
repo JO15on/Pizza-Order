@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.static('dist/Pizza-Order'));
 
 app.get('*/', function(req, res){
-    res.sendFile(path.join(__dirname, '/dist/Pizza-order/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/Pizza-order/index.html'));
 });
 
 let menu = [
