@@ -1,15 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static('dist/Pizza-Order'));
+app.use(express.static('pizzaIMG'));
 
-app.get('*/', function(req, res){
-    res.sendFile(path.join(__dirname + '/dist/Pizza-order/index.html'));
+app.listen(port, () => {
+    console.log(`listening on http://localhost:${port}`);
 });
 
 let menu = [
@@ -107,8 +106,4 @@ app.get('pizza/:id', (req, res) => {
 
     update.quantity = body;
     res.json("updated");
-});
-
-app.listen(port, () => {
-    console.log(`listening on http://localhost:${port}`);
 });
